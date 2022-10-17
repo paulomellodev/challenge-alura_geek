@@ -8,9 +8,9 @@ export const ToggleColorMode = () => {
       aria-label="toggle theme"
       rounded="full"
       size={["xs", "md", "lg"]}
-      position="absolute"
-      top={4}
-      right={4}
+      position="fixed"
+      bottom={[4, 10]}
+      right={[4, null, null, "14", null, "40"]}
       onClick={toggleColorMode}
       icon={colorMode === "dark" ? <FaSun /> : <FaMoon />}
     />

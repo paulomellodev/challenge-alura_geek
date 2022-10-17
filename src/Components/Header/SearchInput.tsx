@@ -1,6 +1,4 @@
 import {
-  Box,
-  color,
   IconButton,
   Input,
   InputGroup,
@@ -9,7 +7,7 @@ import {
   useBreakpoint,
   useOutsideClick,
 } from "@chakra-ui/react";
-import { InputHTMLAttributes, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaSearch } from "react-icons/fa";
 
 interface ISearchInput {
@@ -49,14 +47,15 @@ export const SearchInput = ({ show, setShow, size }: ISearchInput) => {
       borderRadius="50px"
       bg={"gray.100"}
       p="2"
+      gap="1"
     >
       <Input
-        bg={"gray.100"}
+        colorScheme={"gray"}
         p="5"
         w={["210px", "250px", null, "320px"]}
-        borderRadius={"50px"}
-        border="0"
-        _focus={{ border: 0 }}
+        borderRadius={"full"}
+        border="none"
+        _focusVisible={{ border: "none" }}
         ref={ref}
         _placeholder={{ color: "gray.200" }}
         placeholder="O que deseja encontrar?"
@@ -66,10 +65,12 @@ export const SearchInput = ({ show, setShow, size }: ISearchInput) => {
         position="relative"
         children={
           <IconButton
+            colorScheme={"gray"}
             borderRadius="50%"
             aria-label="Search button"
             icon={<FaSearch />}
             onClick={show ? () => console.log("true") : setShow.toggle}
+            _dark={{ color: "gray.400" }}
           />
         }
       />

@@ -8,7 +8,7 @@ export const Logo = ({ ...props }: ILogo) => {
     <Image
       marginRight={["1", "1", null, "8"]}
       objectFit={"contain"}
-      w={[100, 100, 145, 176]}
+      w={["24", "24", "36", "44"]}
       {...props}
     />
   );

@@ -10,6 +10,7 @@ import { Logo } from "./Logo";
 import { SearchInput } from "./SearchInput";
 
 import logoALura from "../../assets/Logo.png";
+import { ToggleColorMode } from "../ToggleColorMode";
 
 export const Header = ({}) => {
   const [show, setShow] = useBoolean(true);
@@ -17,13 +18,14 @@ export const Header = ({}) => {
 
   return (
     <Box
+      as="header"
       h={["72px", null, null, "115px"]}
       display="flex"
       justifyContent={"space-between"}
       alignItems={"center"}
-      w={["100%", "100%", "90%"]}
+      w="full"
       maxW="1136px"
-      padding="0 10px 0"
+      px={2.5}
       margin="auto"
     >
       <HStack>
@@ -35,11 +37,13 @@ export const Header = ({}) => {
         w={[125, 125, 165, 165, 182]}
         colorScheme={"blue"}
         border={"2px"}
+        borderRadius="none"
         variant={"outline"}
         p="6"
       >
         Login
       </Button>
+      <ToggleColorMode />
     </Box>
   );
 };
