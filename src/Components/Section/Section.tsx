@@ -23,7 +23,7 @@ export const Section = ({ products, section }: ISection) => {
       maxW={"1136px"}
       my="16"
       mx={"auto"}
-      p={["2", null, 0]}
+      p={["1", null, 0]}
     >
       <HStack justifyContent={"space-between"} w="full" mb={4}>
         <Heading
@@ -54,6 +54,7 @@ export const Section = ({ products, section }: ISection) => {
                 img={product.img}
                 price={product.price}
                 title={product.title}
+                position={index}
               />
             );
           }

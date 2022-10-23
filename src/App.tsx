@@ -1,6 +1,6 @@
 import { Banner } from "./Components/BannerHomePage/BannerHP";
+import { Footer } from "./Components/Footer";
 import { Header } from "./Components/Header/Header";
-import { Card } from "./Components/Section/Card";
 import { Section } from "./Components/Section/Section";
 
 export function App() {
@@ -72,6 +72,7 @@ export function App() {
       <Section section="Star Wars" products={products} />
       <Section section="Consoles" products={products} />
       <Section section="Diversos" products={products} />
+      <Footer />
     </>
   );
 }

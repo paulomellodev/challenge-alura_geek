@@ -1,7 +1,7 @@
-import { Image } from "@chakra-ui/react";
+import { Image, ImageProps } from "@chakra-ui/react";
 import { ImgHTMLAttributes } from "react";
 
-interface ILogo extends ImgHTMLAttributes<HTMLImageElement> {}
+interface ILogo extends ImageProps {}
 
 export const Logo = ({ ...props }: ILogo) => {
   return (
